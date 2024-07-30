@@ -48,8 +48,6 @@ fun CombinationAnimationScreen() {
     }
     ) {paddingValues->
 
-
-
         LazyColumn(modifier = Modifier.padding(paddingValues)
             .fillMaxSize()
             .padding(horizontal = 8.dp),  verticalArrangement = Arrangement.spacedBy(12.dp)) {
