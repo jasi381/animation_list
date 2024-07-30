@@ -1,7 +1,6 @@
 package com.jasmeet.animations.options
 
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -21,7 +20,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
@@ -46,13 +44,15 @@ fun ShakeAnimationScreen() {
             }
         )
     }
-    ) {paddingValues->
+    ) { paddingValues ->
 
 
-
-        LazyColumn(modifier = Modifier.padding(paddingValues)
-            .fillMaxSize()
-            .padding(horizontal = 8.dp),  verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        LazyColumn(
+            modifier = Modifier
+                .padding(paddingValues)
+                .fillMaxSize()
+                .padding(horizontal = 8.dp), verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
             items(imgList.size / 2) { rowIndex ->
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),

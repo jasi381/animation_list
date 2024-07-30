@@ -45,13 +45,15 @@ fun RotateAnimationScreen() {
             }
         )
     }
-    ) {paddingValues->
+    ) { paddingValues ->
 
 
-
-        LazyColumn(modifier = Modifier.padding(paddingValues)
-            .fillMaxSize()
-            .padding(horizontal = 8.dp),  verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        LazyColumn(
+            modifier = Modifier
+                .padding(paddingValues)
+                .fillMaxSize()
+                .padding(horizontal = 8.dp), verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
             items(imgList.size / 2) { rowIndex ->
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),

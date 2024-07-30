@@ -1,7 +1,6 @@
 package com.jasmeet.animations.options
 
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -45,16 +44,16 @@ fun FadeInAnimationScreen() {
             }
         )
     }
-    ) {paddingValues->
+    ) { paddingValues ->
 
 
-
-        LazyColumn(modifier = Modifier.padding(paddingValues)
-            .fillMaxSize()
-            .padding(horizontal = 8.dp),  verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        LazyColumn(
+            modifier = Modifier
+                .padding(paddingValues)
+                .fillMaxSize()
+                .padding(horizontal = 8.dp), verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
             items(imgList.size / 2) { rowIndex ->
-
-
 
 
                 Row(
@@ -73,7 +72,6 @@ fun FadeInAnimationScreen() {
                                     animationSpec = tween(500)
                                 )
                             }
-
 
                             AsyncImage(
                                 model = ImageRequest.Builder(context)
